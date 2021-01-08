@@ -39,3 +39,6 @@ acct1.withdraw(75)
 
 # 6. Make a withdrawal that exceeds the available balance
 acct1.withdraw(500)
+
+# 7. Make a withdrawal that does not exceeds the available balance
+acct1.withdraw(75)
