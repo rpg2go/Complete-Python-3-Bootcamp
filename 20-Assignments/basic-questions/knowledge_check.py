@@ -1,4 +1,55 @@
 
+### Review the following Python function. What does it do? How would you improve its efficiency?
+
+def process_numbers(numbers):
+    result = []
+    for num in numbers:
+        if num % 2 == 0:
+            result.append(num * num)
+    return result
+
+numbers = list(range(1, 1000000))
+squared_evens = process_numbers(numbers)
+
+## Using List Comprehension in Python
+
+def process_numbers(numbers):
+    return [num * num for num in numbers if num % 2 == 0]
+
+# Notes: List comprehension is a concise way to create lists in Python. It allows you to generate a new list by applying an expression to each element in an iterable, typically replacing for loops for more readable and efficient code.
+#   new_list = [expression for item in iterable if condition]
+
+squares = []
+for num in range(1, 6):
+    squares.append(num ** 2)
+print(squares)  # Output: [1, 4, 9, 16, 25]
+
+squares = [num ** 2 for num in range(1, 6)]
+print(squares)  # Output: [1, 4, 9, 16, 25]
+
+
+### Filtering List of Dictionaries
+
+data = [
+    {"name": "Alice", "age": 25},
+    {"name": "Bob", "age": 30},
+    {"name": "Charlie", "age": 22}
+]
+
+# Filter people older than 25
+filtered_data = [person for person in data if person["age"] > 25]
+print(filtered_data)  # [{'name': 'Bob', 'age': 30}]
+
+
+def remove_duplicates(lst):
+    seen = set()
+    return [x for x in lst if not (x in seen or seen.add(x))]
+
+print(remove_duplicates([1, 2, 3, 1, 2, 4]))  # [1, 2, 3, 4]
+
+
+
+
 #### 1. Using Pandas for Efficient Data Handling
 
 ### Reading a Large CSV in Chunks
