@@ -17,10 +17,10 @@ except Exception as e:
     data = []
 
 # Example JSON data
-# data = [
+# [
 #     {"name": "John", "age": 30, "createdDateTime": "2025-01-02 23:10:03"},
 #     {"name": "Jane", "age": 25, "createdDateTime": "2025-01-02 24:10:03"},  # Invalid timestamp
-#     {"name": "Doe", "age": 22, "createdDateTime": "2025-01-02 23:15:03"}
+#     {"name": "Doe", "age": 22, "createdDateTime": "2025-01-02 23:67:03"}    # Invalid timestamp
 # ]
 
 # Save data to CSV
