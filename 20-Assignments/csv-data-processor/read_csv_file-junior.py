@@ -16,6 +16,13 @@ except Exception as e:
     print(f"Error fetching data: {e}")
     data = []
 
+# Example JSON data
+# data = [
+#     {"name": "John", "age": 30, "createdDateTime": "2025-01-02 23:10:03"},
+#     {"name": "Jane", "age": 25, "createdDateTime": "2025-01-02 24:10:03"},  # Invalid timestamp
+#     {"name": "Doe", "age": 22, "createdDateTime": "2025-01-02 23:15:03"}
+# ]
+
 # Save data to CSV
 if len(data) > 0:
     try:
@@ -23,7 +30,13 @@ if len(data) > 0:
         file = open(CSV_FILENAME, "w", newline="", encoding="utf-8")
         writer = csv.DictWriter(file, fieldnames=keys)
         writer.writeheader()
+
+        ## as it 
         writer.writerows(data)
+
+        ## TODO: Iterate through the json data, validate the createdDateTime attribute for each 
+        ##  ....replace with actual code....
+
         file.close()
         print(f"Data saved to {CSV_FILENAME}")
     except Exception as e:
